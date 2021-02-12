@@ -36,10 +36,29 @@ public class Main {
 //        System.out.println(list.getKthFromTheEnd(-1));
 //        System.out.println(list.getMiddle());
 //        System.out.println(list.hasLoop());
-        StringReverser string = new StringReverser();
-        System.out.println(string.reverseString("Reverse this string."));
-        Expression expression = new Expression();
-        System.out.println(expression.paranthesisMatch("<(1+2)({}[[]])>"));
+//        StringReverser string = new StringReverser();
+//        System.out.println(string.reverseString("Reverse this string."));
+//        Expression expression = new Expression();
+//        System.out.println(expression.paranthesisMatch("<(1+2)({}[[]])>"));
+
+        Stack stack = new Stack();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
+        stack.push(6);
+        stack.push(7);
+        System.out.println(stack.pop());
+        System.out.println(stack.peek());
+        System.out.println(stack.isEmpty());
+        System.out.println(stack.pop());
+        System.out.println(stack.isEmpty());
+        System.out.println(stack.size());
+        System.out.println(stack);
+
+
+
 
     }
 
