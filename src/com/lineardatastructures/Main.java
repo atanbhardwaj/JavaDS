@@ -19,6 +19,7 @@ public class Main {
         list.addLast(30);
         list.addFirst(5);
         list.addLast(50);
+        list.addLast(60);
 //        System.out.println("Size " + (list.size()));
 //        int x = list.indexOf(10);
 //        System.out.println(x);
@@ -33,5 +34,7 @@ public class Main {
         int[] array = list.toArray();
         System.out.println(Arrays.toString(array));
         System.out.println(list.getKthFromTheEnd(-1));
+        System.out.println(list.getMiddle());
+        System.out.println(list.hasLoop());
     }
 }

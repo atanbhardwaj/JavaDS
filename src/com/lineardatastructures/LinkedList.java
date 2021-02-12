@@ -136,4 +136,28 @@ public class LinkedList {
         return apoint.value;
     }
 
+    public int getMiddle(){
+        if(isEmpty())   return -1;
+        Node slow = first;
+        Node fast = first;
+        while(fast!=null && fast.next!=null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow.value;
+    }
+
+    public boolean hasLoop(){
+        if(isEmpty()) return false;
+        Node slow = first;
+        Node fast = first;
+        while(fast!=null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow==fast)
+                return true;
+        }
+        return false;
+    }
+
 }
