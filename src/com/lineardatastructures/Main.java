@@ -115,7 +115,6 @@ public class Main {
 //        System.out.println(queuestacks.peek());
 
 
-
 //        PriorityQueue queue = new PriorityQueue(5);
 //        queue.enqueue(4);
 //        queue.enqueue(5);
@@ -123,8 +122,14 @@ public class Main {
 //        System.out.println(queue.toString());
 
         RepeatingChar object = new RepeatingChar();
-        String string = "a green apple";
-        char result = object.firstNonRepeatingCharacter(string);
+        String string = "green apple";
+//        char result = object.firstNonRepeatingCharacter(string);
+//        System.out.println(result);
+//    }
+
+        char result = object.firstRepeatingCharacter(string);
         System.out.println(result);
+
+
     }
 }
