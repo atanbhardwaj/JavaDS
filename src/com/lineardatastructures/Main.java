@@ -78,32 +78,42 @@ public class Main {
 //            queue.add(stack.pop());
 //    }
 
-        ArrayQueue queue = new ArrayQueue(5);
-        System.out.println(queue.isEmpty());
-        System.out.println(queue.isFull());
-        queue.enqueue(1);
-        queue.enqueue(2);
-        queue.enqueue(3);
-        System.out.println(queue.peek());
-        System.out.println(queue.isEmpty());
-        System.out.println(queue.isFull());
-        System.out.println(queue.peek());
-        System.out.println(queue.size());
-        queue.enqueue(5);
-        queue.enqueue(7);
-        queue.dequeue();
-        queue.dequeue();
-        queue.dequeue();
-        queue.dequeue();
-        queue.dequeue();
-        queue.enqueue(8);
-        queue.enqueue(9);
-        queue.enqueue(10);
-        queue.dequeue();
-        System.out.println(queue.peek());
-        String array = queue.toString();
-        System.out.println(array);
-        System.out.println(queue.size());
+//        ArrayQueue queue = new ArrayQueue(5);
+//        System.out.println(queue.isEmpty());
+//        System.out.println(queue.isFull());
+//        queue.enqueue(1);
+//        queue.enqueue(2);
+//        queue.enqueue(3);
+//        System.out.println(queue.peek());
+//        System.out.println(queue.isEmpty());
+//        System.out.println(queue.isFull());
+//        System.out.println(queue.peek());
+//        System.out.println(queue.size());
+//        queue.enqueue(5);
+//        queue.enqueue(7);
+//        queue.dequeue();
+//        queue.dequeue();
+//        queue.dequeue();
+//        queue.dequeue();
+//        queue.dequeue();
+//        queue.enqueue(8);
+//        queue.enqueue(9);
+//        queue.enqueue(10);
+//        queue.dequeue();
+//        System.out.println(queue.peek());
+//        String array = queue.toString();
+//        System.out.println(array);
+//        System.out.println(queue.size());
+
+
+        QueueWithTwoStacks queuestacks = new QueueWithTwoStacks();
+        queuestacks.enqueue(1);
+        queuestacks.enqueue(2);
+        queuestacks.enqueue(3);
+        System.out.println(queuestacks.dequeue());
+        System.out.println(queuestacks.dequeue());
+        System.out.println(queuestacks.dequeue());
+
 
     }
 }
