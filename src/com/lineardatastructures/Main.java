@@ -106,14 +106,21 @@ public class Main {
 //        System.out.println(queue.size());
 
 
-        QueueWithTwoStacks queuestacks = new QueueWithTwoStacks();
-        queuestacks.enqueue(1);
-        queuestacks.enqueue(2);
-        queuestacks.enqueue(3);
-        System.out.println(queuestacks.dequeue());
-        System.out.println(queuestacks.dequeue());
-        System.out.println(queuestacks.dequeue());
+//        QueueWithTwoStacks queuestacks = new QueueWithTwoStacks();
+//        queuestacks.enqueue(1);
+//        queuestacks.enqueue(2);
+//        queuestacks.enqueue(3);
+//        System.out.println(queuestacks.dequeue());
+//        System.out.println(queuestacks.dequeue());
+//        System.out.println(queuestacks.peek());
 
+
+
+        PriorityQueue queue = new PriorityQueue(5);
+        queue.enqueue(4);
+        queue.enqueue(5);
+        queue.enqueue(3);
+        System.out.println(queue.toString());
 
     }
 }
