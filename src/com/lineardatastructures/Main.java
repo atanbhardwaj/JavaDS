@@ -1,8 +1,8 @@
 package com.lineardatastructures;
-import java.util.ArrayDeque;
-import java.util.Arrays;
-import java.util.Queue;
-import java.util.Stack;
+        import java.util.ArrayDeque;
+        import java.util.Arrays;
+        import java.util.Queue;
+        import java.util.Stack;
 public class Main {
 
     public static void main(String[] args) {
@@ -116,11 +116,15 @@ public class Main {
 
 
 
-        PriorityQueue queue = new PriorityQueue(5);
-        queue.enqueue(4);
-        queue.enqueue(5);
-        queue.enqueue(3);
-        System.out.println(queue.toString());
+//        PriorityQueue queue = new PriorityQueue(5);
+//        queue.enqueue(4);
+//        queue.enqueue(5);
+//        queue.enqueue(3);
+//        System.out.println(queue.toString());
 
+        RepeatingChar object = new RepeatingChar();
+        String string = "a green apple";
+        char result = object.firstNonRepeatingCharacter(string);
+        System.out.println(result);
     }
 }
