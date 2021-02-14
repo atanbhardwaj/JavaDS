@@ -121,14 +121,26 @@ public class Main {
 //        queue.enqueue(3);
 //        System.out.println(queue.toString());
 
-        RepeatingChar object = new RepeatingChar();
-        String string = "green apple";
+//        RepeatingChar object = new RepeatingChar();
+//        String string = "green apple";
 //        char result = object.firstNonRepeatingCharacter(string);
 //        System.out.println(result);
 //    }
 
-        char result = object.firstRepeatingCharacter(string);
-        System.out.println(result);
+//        char result = object.firstRepeatingCharacter(string);
+//        System.out.println(result);
+
+
+        HashTable data = new HashTable();
+        data.put(1,"Anjali");
+        data.put(2,"John");
+        data.put(3,"Kate");
+        System.out.println(data.get(3));
+        System.out.println(data.get(1));
+        System.out.println(data.get(2));
+        data.put(2,"Natalie");
+        data.remove(3);
+        System.out.println(data.get(2));
 
 
     }
