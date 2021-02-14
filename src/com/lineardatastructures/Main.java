@@ -131,16 +131,16 @@ public class Main {
 //        System.out.println(result);
 
 
-        HashTable data = new HashTable();
-        data.put(1,"Anjali");
-        data.put(2,"John");
-        data.put(3,"Kate");
-        System.out.println(data.get(3));
-        System.out.println(data.get(1));
-        System.out.println(data.get(2));
-        data.put(2,"Natalie");
-        data.remove(3);
-        System.out.println(data.get(2));
+//        HashTable data = new HashTable();
+//        data.put(1,"Anjali");
+//        data.put(2,"John");
+//        data.put(3,"Kate");
+//        System.out.println(data.get(3));
+//        System.out.println(data.get(1));
+//        System.out.println(data.get(2));
+//        data.put(2,"Natalie");
+//        data.remove(3);
+//        System.out.println(data.get(2));
 
 
     }
