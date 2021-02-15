@@ -60,5 +60,4 @@ public class HashTable {
         return key % entries.length;
     }
 
-
 }

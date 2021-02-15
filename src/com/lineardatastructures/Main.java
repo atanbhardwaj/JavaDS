@@ -1,4 +1,5 @@
 package com.lineardatastructures;
+import com.nonlineardatastructures.*;
         import java.util.ArrayDeque;
         import java.util.Arrays;
         import java.util.Queue;
@@ -142,6 +143,10 @@ public class Main {
 //        data.remove(3);
 //        System.out.println(data.get(2));
 
-
+        Trees tree = new Trees();
+        tree.insert(7);
+        tree.insert(5);
+        tree.insert(9);
+        System.out.println("Done");
     }
 }
