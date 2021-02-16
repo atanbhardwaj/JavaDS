@@ -181,9 +181,15 @@ public class Main {
 
         AVLTree avltree = new AVLTree();
         avltree.insert(10);
-        avltree.insert(7);
-        avltree.insert(19);
-
+        avltree.insert(30);
+        avltree.insert(20);
+        avltree.insert(50);
+        avltree.insert(60);
+        avltree.insert(5);
+        avltree.insert(1);
+        avltree.insert(3);
+        avltree.insert(23);
+        avltree.inOrderTraversal();
 
 
 
