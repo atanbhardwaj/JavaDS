@@ -143,26 +143,26 @@ public class Main {
 //        data.remove(3);
 //        System.out.println(data.get(2));
 
-        Trees tree = new Trees();
-        tree.insert(7);
-        tree.insert(5);
-        tree.insert(9);
-        tree.insert(11);
-        tree.insert(1);
-        tree.insert(4);
-        tree.insert(6);
-        tree.insert(79);
-        Trees tree2 = new Trees();
-        tree2.insert(7);
-        tree2.insert(5);
-        tree2.insert(9);
-        tree2.insert(11);
-        tree2.insert(1);
-        tree2.insert(4);
-        tree2.insert(6);
-        tree2.insert(79);
-        boolean answer = tree.isEquals(tree2);
-        System.out.println(answer);
+//        Trees tree = new Trees();
+//        tree.insert(7);
+//        tree.insert(5);
+//        tree.insert(9);
+//        tree.insert(11);
+//        tree.insert(1);
+//        tree.insert(4);
+//        tree.insert(6);
+//        tree.insert(79);
+//        Trees tree2 = new Trees();
+//        tree2.insert(7);
+//        tree2.insert(5);
+//        tree2.insert(9);
+//        tree2.insert(11);
+//        tree2.insert(1);
+//        tree2.insert(4);
+//        tree2.insert(6);
+//        tree2.insert(79);
+//        boolean answer = tree.isEquals(tree2);
+//        System.out.println(answer);
 //        tree.preOrderTraversal();
 //        System.out.println();
 //        tree.postOrderTraversal();
@@ -172,8 +172,22 @@ public class Main {
 //        int minimum = tree.min();
 //        System.out.println("\n" + minimum);
 //        System.out.println(tree.isBinarySearchTree());
-        ArrayList<Integer> list =tree.getNodesAtDistance(3);
-        System.out.println(list);
-        tree.levelOrderTraversal();
+//        ArrayList<Integer> list =tree.getNodesAtDistance(3);
+//        System.out.println(list);
+//        tree.levelOrderTraversal();
+
+
+        //AVL TREE
+
+        AVLTree avltree = new AVLTree();
+        avltree.insert(10);
+        avltree.insert(7);
+        avltree.insert(19);
+
+
+
+
+
+
     }
 }
