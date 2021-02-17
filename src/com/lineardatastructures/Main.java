@@ -179,19 +179,27 @@ public class Main {
 
         //AVL TREE
 
-        AVLTree avltree = new AVLTree();
-        avltree.insert(10);
-        avltree.insert(30);
-        avltree.insert(20);
-        avltree.insert(50);
-        avltree.insert(60);
-        avltree.insert(5);
-        avltree.insert(1);
-        avltree.insert(3);
-        avltree.insert(23);
-        avltree.inOrderTraversal();
+//        AVLTree avltree = new AVLTree();
+//        avltree.insert(10);
+//        avltree.insert(30);
+//        avltree.insert(20);
+//        avltree.insert(50);
+//        avltree.insert(60);
+//        avltree.insert(5);
+//        avltree.insert(1);
+//        avltree.insert(3);
+//        avltree.insert(23);
+//        avltree.inOrderTraversal();
 
 
+
+        Heap heap = new Heap();
+        heap.insert(10);
+        heap.insert(5);
+        heap.insert(17);
+        heap.insert(4);
+        heap.insert(22);
+        System.out.println("K");
 
 
 
