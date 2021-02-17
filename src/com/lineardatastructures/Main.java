@@ -192,22 +192,27 @@ public class Main {
 //        avltree.inOrderTraversal();
 
 
+//
+//        Heap heap = new Heap();
+//
+//
+//        int []numbers = {7,10,1,3,6};
+//
+//        for(int n: numbers)
+//            heap.insert(n);
+//
+//        for(int i = numbers.length-1; i >= 0; i--)
+//            numbers[i] = heap.remove();
+//
+//        System.out.println(Arrays.toString(numbers));
 
-        Heap heap = new Heap();
 
-
-        int []numbers = {7,10,1,3,6};
-
-        for(int n: numbers)
-            heap.insert(n);
-
-        for(int i = numbers.length-1; i >= 0; i--)
-            numbers[i] = heap.remove();
-
-        System.out.println(Arrays.toString(numbers));
-
-
-
+        PriorityQueueWithHeaps pq = new PriorityQueueWithHeaps();
+        pq.enqueue(10);
+        pq.enqueue(7);
+        pq.enqueue(15);
+        System.out.println(pq.dequeue());
+        System.out.println(pq.dequeue());
 
     }
 }
