@@ -214,9 +214,13 @@ public class Main {
 //        System.out.println(pq.dequeue());
 //        System.out.println(pq.dequeue());
 
-        int []numbers = {5,3,8,4,1,2};
+        int []numbers = {15,3,78,1,422,2};
         MaxHeap.heapify(numbers);
         System.out.println(Arrays.toString(numbers));
+
+
+
+
 
     }
 }

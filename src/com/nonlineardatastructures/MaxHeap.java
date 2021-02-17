@@ -21,7 +21,6 @@ public class MaxHeap {
         if(index == largerIndex)
             return;
 
-
         swap(array, index, largerIndex);
         heapify(array, largerIndex);
     }
