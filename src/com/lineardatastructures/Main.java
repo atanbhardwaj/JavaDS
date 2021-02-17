@@ -194,13 +194,18 @@ public class Main {
 
 
         Heap heap = new Heap();
-        heap.insert(10);
-        heap.insert(5);
-        heap.insert(17);
-        heap.insert(4);
-        heap.insert(22);
-        System.out.println(heap.remove());
-        System.out.println("K");
+
+
+        int []numbers = {7,10,1,3,6};
+
+        for(int n: numbers)
+            heap.insert(n);
+
+        for(int i = numbers.length-1; i >= 0; i--)
+            numbers[i] = heap.remove();
+
+        System.out.println(Arrays.toString(numbers));
+
 
 
 
