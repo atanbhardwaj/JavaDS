@@ -207,12 +207,16 @@ public class Main {
 //        System.out.println(Arrays.toString(numbers));
 
 
-        PriorityQueueWithHeaps pq = new PriorityQueueWithHeaps();
-        pq.enqueue(10);
-        pq.enqueue(7);
-        pq.enqueue(15);
-        System.out.println(pq.dequeue());
-        System.out.println(pq.dequeue());
+//        PriorityQueueWithHeaps pq = new PriorityQueueWithHeaps();
+//        pq.enqueue(10);
+//        pq.enqueue(7);
+//        pq.enqueue(15);
+//        System.out.println(pq.dequeue());
+//        System.out.println(pq.dequeue());
+
+        int []numbers = {5,3,8,4,1,2};
+        MaxHeap.heapify(numbers);
+        System.out.println(Arrays.toString(numbers));
 
     }
 }
