@@ -215,9 +215,10 @@ public class Main {
 //        System.out.println(pq.dequeue());
 
 //        int []numbers = {15,4 ,7, 154,3,78,1,422,2};
-        int []numbers = {5,10,4,1,3,2};
-        MaxHeap.heapify(numbers);
-        System.out.println(Arrays.toString(numbers));
+//        int []numbers = {5,10,4,1,3,2};
+//        MaxHeap.heapify(numbers);
+//        System.out.println(Arrays.toString(numbers));
+
 
 
 
