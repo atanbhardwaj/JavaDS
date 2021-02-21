@@ -64,15 +64,25 @@ public class Trie {
         return current.isEndOfWord;
     }
 
-    public void traverse()
+    public void traversePost()
     {
-        traverse(root);
+        traversePost(root);
     }
-    private void traverse(TrieNode root)
+    public void traversePre()
+    {
+        traversePre(root);
+    }
+    private void traversePost(TrieNode root)
+    {
+        for(TrieNode child: root.getChildren())
+            traversePost(child);
+        System.out.println(root.value);
+    }
+    private void traversePre(TrieNode root)
     {
         System.out.println(root.value);
         for(TrieNode child: root.getChildren())
-            traverse(child);
+            traversePre(child);
     }
 
 }

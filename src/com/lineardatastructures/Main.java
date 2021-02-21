@@ -223,14 +223,16 @@ public class Main {
 
         Trie trie = new Trie();
         trie.insert("cow");
-        trie.insert("cows");
-        trie.insert("canada");
-//        System.out.println("Done");
-        System.out.println(trie.contains("canada"));
-        System.out.println(trie.contains("can"));
-        System.out.println(trie.contains("cows"));
+//        trie.insert("cows");
+//        trie.insert("canada");
+////        System.out.println("Done");
+//        System.out.println(trie.contains("canada"));
+//        System.out.println(trie.contains("can"));
+//        System.out.println(trie.contains("cows"));
 
 
+        trie.traversePost();
+        trie.traversePre();
 
 
 
