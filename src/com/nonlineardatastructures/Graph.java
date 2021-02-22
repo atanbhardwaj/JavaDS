@@ -47,6 +47,15 @@ public class Graph {
         }
     }
 
+    public void removeNode(String label){
+        Node node = nodes.get(label);
+        if(node == null)
+            return;
+        for(Node n: adjacencyList.keySet())
+            adjacencyList.get(n).remove(node);
 
+        adjacencyList.remove(node);
+        nodes.remove(node);
+    }
 
 }
