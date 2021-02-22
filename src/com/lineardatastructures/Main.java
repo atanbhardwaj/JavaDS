@@ -235,14 +235,28 @@ public class Main {
 //        trie.traversePre();
 
 
+//        Trie trie = new Trie();
+//        trie.insert("car");
+//        trie.insert("care");
+//        trie.remove("car");
+//        System.out.println(trie.contains("car"));
+//        System.out.println(trie.contains("care"));
+
+
         Trie trie = new Trie();
+
+        trie.insert("cannon");
         trie.insert("car");
-        trie.insert("care");
-        trie.remove("car");
-        System.out.println(trie.contains("car"));
-        System.out.println(trie.contains("care"));
-
-
+        trie.insert("candle");
+        trie.insert("cat");
+        trie.insert("carrying");
+        trie.insert("carol");
+        trie.insert("card");
+        trie.insert("careful");
+        trie.insert("eggs");
+        trie.insert("chicken");
+        
+        System.out.println(trie.findWords(""));
 
     }
 }

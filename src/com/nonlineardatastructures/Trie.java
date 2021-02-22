@@ -1,6 +1,8 @@
 package com.nonlineardatastructures;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Trie {
     public static int ALPHABET_SIZE = 26;
@@ -117,4 +119,37 @@ public class Trie {
             root.removeChild(ch);
 
     }
+
+    public List<String> findWords(String prefix){
+        List<String> words = new ArrayList<>();
+        TrieNode lastNode = findLastNodeof(prefix);
+        findWords(lastNode, prefix, words);
+        return words;
+    }
+
+    private void findWords(TrieNode root, String prefix, List<String> words){
+        if(root==null)
+            return;
+        if(root.isEndOfWord)
+            words.add(prefix);
+        for(TrieNode child: root.getChildren()){
+            findWords(child, prefix+child.value, words);
+        }
+    }
+
+
+    private TrieNode findLastNodeof(String prefix){
+        if(prefix==null)
+            return null;
+        TrieNode current = root;
+
+        for(char ch: prefix.toCharArray()){
+            TrieNode child = current.getChild(ch);
+            if(child == null)
+                return null;
+            current = child;
+        }
+        return current;
+    }
+
 }
