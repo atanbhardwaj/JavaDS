@@ -221,8 +221,8 @@ public class Main {
 
 
 
-        Trie trie = new Trie();
-        trie.insert("cow");
+//        Trie trie = new Trie();
+//        trie.insert("cow");
 //        trie.insert("cows");
 //        trie.insert("canada");
 ////        System.out.println("Done");
@@ -231,8 +231,16 @@ public class Main {
 //        System.out.println(trie.contains("cows"));
 
 
-        trie.traversePost();
-        trie.traversePre();
+//        trie.traversePost();
+//        trie.traversePre();
+
+
+        Trie trie = new Trie();
+        trie.insert("car");
+        trie.insert("care");
+        trie.remove("car");
+        System.out.println(trie.contains("car"));
+        System.out.println(trie.contains("care"));
 
 
 
