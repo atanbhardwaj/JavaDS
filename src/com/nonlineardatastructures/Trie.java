@@ -91,6 +91,7 @@ public class Trie {
     }
     private void traversePre(TrieNode root)
     {
+        if(root.value!=' ')
         System.out.println(root.value);
         for(TrieNode child: root.getChildren())
             traversePre(child);

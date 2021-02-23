@@ -244,19 +244,22 @@ public class Main {
 
 
         Trie trie = new Trie();
-
         trie.insert("cannon");
         trie.insert("car");
         trie.insert("candle");
         trie.insert("cat");
         trie.insert("carrying");
         trie.insert("carol");
+        trie.insert("and");
         trie.insert("card");
         trie.insert("careful");
         trie.insert("eggs");
         trie.insert("chicken");
         
-        System.out.println(trie.findWords(""));
+//        System.out.println(trie.findWords(""));
+
+        trie.traversePre();
+
 
     }
 }
