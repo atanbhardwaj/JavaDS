@@ -1,6 +1,7 @@
 package com.lineardatastructures;
 import com.nonlineardatastructures.*;
 
+import java.awt.List;
 import java.util.*;
 import java.util.Stack;
 
@@ -261,15 +262,15 @@ public class Main {
 //        trie.traversePre();
 
 
-        Graph graph = new Graph();
-        graph.addNode("A");
-        graph.addNode("B");
-        graph.addNode("C");
-        graph.addNode("D");
-        graph.addEdge("A", "B");
-        graph.addEdge("A", "C");
-        graph.addEdge("A", "D");
-        graph.addEdge("C", "D");
+//        Graph graph = new Graph();
+//        graph.addNode("A");
+//        graph.addNode("B");
+//        graph.addNode("C");
+//        graph.addNode("D");
+//        graph.addEdge("A", "B");
+//        graph.addEdge("A", "C");
+//        graph.addEdge("A", "D");
+//        graph.addEdge("C", "D");
 ////        graph.removeEdge("A","C");
 ////        graph.removeNode("B");
 ////        graph.removeNode("A");
@@ -279,7 +280,22 @@ public class Main {
 //
 //        graph.dfsIterative("R");
 
-        graph.bfs("C");
+//        graph.bfs("C");
+
+        Graph graph = new Graph();
+        graph.addNode("X");
+        graph.addNode("A");
+        graph.addNode("P");
+        graph.addNode("B");
+
+        graph.addEdge("X","A");
+        graph.addEdge("X","B");
+        graph.addEdge("A","P");
+        graph.addEdge("B","P");
+
+        System.out.println(graph.topologicalSort("X"));
+
+
 
     }
 }

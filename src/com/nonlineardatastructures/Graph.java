@@ -136,4 +136,27 @@ public class Graph {
 
     }
 
+    public List<String> topologicalSort(String root){
+        Stack<Node> stack = new Stack<>();
+        Set<Node> visited = new HashSet<>();
+        for(Node node: nodes.values())
+            topologicalSort(node, visited, stack);
+        List<String> sorted = new ArrayList<>();
+        while(!stack.isEmpty())
+            sorted.add(stack.pop().label);
+        return sorted;
+    }
+
+    private void topologicalSort(Node root, Set<Node> visited, Stack<Node> stack)
+    {
+        if(visited.contains(root))
+            return;
+        visited.add(root);
+
+        for(Node neighbor: adjacencyList.get(root))
+            topologicalSort(neighbor, visited, stack);
+        stack.push(root);
+    }
+
+
 }
