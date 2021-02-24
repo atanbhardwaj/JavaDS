@@ -90,12 +90,23 @@ public class Graph {
         if(node == null)
             return;
 
+        Set<Node> visited = new HashSet<>();
         Stack<Node> callStack = new Stack<>();
         callStack.push(node);
 
         while(!callStack.isEmpty()){
             Node current = callStack.pop();
 
+            if(visited.contains(current))
+                continue;
+
+            System.out.println(current);
+            visited.add(current);
+
+            for(Node neighbor: adjacencyList.get(current)){
+                if(!visited.contains(neighbor))
+                    callStack.push(neighbor);
+            }
         }
     }
 
