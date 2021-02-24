@@ -282,20 +282,27 @@ public class Main {
 
 //        graph.bfs("C");
 
+//        Graph graph = new Graph();
+//        graph.addNode("X");
+//        graph.addNode("A");
+//        graph.addNode("P");
+//        graph.addNode("B");
+//
+//        graph.addEdge("X","A");
+//        graph.addEdge("X","B");
+//        graph.addEdge("A","P");
+//        graph.addEdge("B","P");
+//
+//        System.out.println(graph.topologicalSort("X"));
+
         Graph graph = new Graph();
-        graph.addNode("X");
         graph.addNode("A");
-        graph.addNode("P");
         graph.addNode("B");
-
-        graph.addEdge("X","A");
-        graph.addEdge("X","B");
-        graph.addEdge("A","P");
-        graph.addEdge("B","P");
-
-        System.out.println(graph.topologicalSort("X"));
-
-
+        graph.addNode("C");
+        graph.addEdge("A","B");
+        graph.addEdge("B","C");
+        graph.addEdge("A","C");
+        System.out.println(graph.hasCycle());
 
     }
 }
