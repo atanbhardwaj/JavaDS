@@ -269,9 +269,10 @@ public class Main {
         graph.addEdge("A", "C");
 //        graph.removeEdge("A","C");
 //        graph.removeNode("B");
-        graph.removeNode("A");
+//        graph.removeNode("A");
         graph.addEdge("B","C");
         graph.print();
+        graph.dfsRecurvsive("A");
 
 
 

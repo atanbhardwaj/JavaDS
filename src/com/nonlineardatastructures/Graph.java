@@ -68,4 +68,35 @@ public class Graph {
         adjacencyList.get(fromNode).remove(toNode);
     }
 
+    public void dfsRecurvsive(String root){
+        Node node = nodes.get(root);
+        if(node == null)
+            return;
+        dfsRecurvsive(node, new HashSet<>());
+    }
+
+    private void dfsRecurvsive(Node root, Set<Node> visited){
+        System.out.println(root.label);
+        visited.add(root);
+        for(Node node: adjacencyList.get(root)){
+            if(!visited.contains(node))
+                dfsRecurvsive(node, visited);
+        }
+    }
+
+    public void dfsIterative(String root)
+    {
+        Node node = nodes.get(root);
+        if(node == null)
+            return;
+
+        Stack<Node> callStack = new Stack<>();
+        callStack.push(node);
+
+        while(!callStack.isEmpty()){
+            Node current = callStack.pop();
+
+        }
+    }
+
 }
