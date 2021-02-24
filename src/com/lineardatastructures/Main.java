@@ -261,12 +261,15 @@ public class Main {
 //        trie.traversePre();
 
 
-//        Graph graph = new Graph();
-//        graph.addNode("A");
-//        graph.addNode("B");
-//        graph.addNode("C");
-//        graph.addEdge("A", "B");
-//        graph.addEdge("A", "C");
+        Graph graph = new Graph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
+        graph.addEdge("A", "B");
+        graph.addEdge("A", "C");
+        graph.addEdge("A", "D");
+        graph.addEdge("C", "D");
 ////        graph.removeEdge("A","C");
 ////        graph.removeNode("B");
 ////        graph.removeNode("A");
@@ -276,6 +279,7 @@ public class Main {
 //
 //        graph.dfsIterative("R");
 
+        graph.bfs("C");
 
     }
 }

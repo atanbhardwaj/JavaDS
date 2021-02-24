@@ -110,4 +110,30 @@ public class Graph {
         }
     }
 
+    public void bfs(String root)
+    {
+        Node node = nodes.get(root);
+        if(node == null)
+            return;
+
+        Set<Node> visited = new HashSet<>();
+        Queue<Node> queue = new ArrayDeque<>();
+        queue.add(node);
+
+        while(!queue.isEmpty()){
+            Node current = queue.remove();
+            if(visited.contains(current))
+                continue;
+            System.out.println(current);
+            visited.add(current);
+
+            for(Node neighbor: adjacencyList.get(current)){
+                if(!visited.contains(neighbor))
+                    queue.add(neighbor);
+            }
+        }
+
+
+    }
+
 }
