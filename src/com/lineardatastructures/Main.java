@@ -243,22 +243,36 @@ public class Main {
 //        System.out.println(trie.contains("care"));
 
 
-        Trie trie = new Trie();
-        trie.insert("cannon");
-        trie.insert("car");
-        trie.insert("candle");
-        trie.insert("cat");
-        trie.insert("carrying");
-        trie.insert("carol");
-        trie.insert("and");
-        trie.insert("card");
-        trie.insert("careful");
-        trie.insert("eggs");
-        trie.insert("chicken");
+//        Trie trie = new Trie();
+//        trie.insert("cannon");
+//        trie.insert("car");
+//        trie.insert("candle");
+//        trie.insert("cat");
+//        trie.insert("carrying");
+//        trie.insert("carol");
+//        trie.insert("and");
+//        trie.insert("card");
+//        trie.insert("careful");
+//        trie.insert("eggs");
+//        trie.insert("chicken");
         
 //        System.out.println(trie.findWords(""));
 
-        trie.traversePre();
+//        trie.traversePre();
+
+
+        Graph graph = new Graph();
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addEdge("A", "B");
+        graph.addEdge("A", "C");
+//        graph.removeEdge("A","C");
+//        graph.removeNode("B");
+        graph.removeNode("A");
+        graph.addEdge("B","C");
+        graph.print();
+
 
 
     }

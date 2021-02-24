@@ -41,8 +41,8 @@ public class Graph {
     public void print(){
         for(Node source: adjacencyList.keySet()){
             List<Node> targets = adjacencyList.get(source);
-            while(!targets.isEmpty()){
-                System.out.println(source+"is connected to "+targets);
+            if(!targets.isEmpty()){
+                System.out.println(source+" is connected to "+targets);
             }
         }
     }
@@ -56,6 +56,16 @@ public class Graph {
 
         adjacencyList.remove(node);
         nodes.remove(node);
+    }
+
+    public void removeEdge(String from, String to){
+        Node fromNode = nodes.get(from);
+        Node toNode = nodes.get(to);
+
+        if(fromNode == null || toNode == null)
+            return;
+
+        adjacencyList.get(fromNode).remove(toNode);
     }
 
 }
