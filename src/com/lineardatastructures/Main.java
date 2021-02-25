@@ -306,7 +306,7 @@ public class Main {
 //        graph.print();
 //        System.out.println(graph.hasCycle());
 
-
+//
 //        WeightedGraph wgraph = new WeightedGraph();
 //        wgraph.addNode("A");
 //        wgraph.addNode("B");
@@ -334,9 +334,26 @@ public class Main {
 //        wgraph1.addNode("B");
 //        wgraph1.addNode("C");
 //        wgraph1.addNode("D");
-//        wgraph1.addEdge("A","B",2);
+//        wgraph1.addEdge("A","B",3);
 //        wgraph1.addEdge("B","C",2);
-//        wgraph1.addEdge("C","D",2);
+//        wgraph1.addEdge("B","D",4);
+//        wgraph1.addEdge("A","C",1);
+//        wgraph1.addEdge("C","D",5);
 //        System.out.println("Has Cycle: "+wgraph1.hasCycle());
+//
+//        WeightedGraph minimumSpanningTree = wgraph1.getMinimumSpanningTree();
+//        minimumSpanningTree.print();
+
+        WeightedGraph newtree = new WeightedGraph();
+        newtree.addNode("A");
+        newtree.addNode("B");
+        newtree.addNode("C");
+        newtree.addNode("D");
+        newtree.addEdge("A","B",2);
+        newtree.addEdge("B","C",2);
+        newtree.addEdge("C","D",2);
+        newtree.getMinimumSpanningTree().print();
+
+
     }
 }
