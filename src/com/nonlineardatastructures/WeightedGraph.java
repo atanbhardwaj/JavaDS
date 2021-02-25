@@ -109,7 +109,59 @@ public class WeightedGraph {
     }
 
 
+    public Path getShortestPath(String from, String to){
+        Node fromNode = nodes.get(from);
+        if(fromNode == null)
+            throw new IllegalStateException();
 
+        Node toNode = nodes.get(to);
+        if(toNode == null)
+            throw new IllegalStateException();
+
+        Map<Node, Integer> distances = new HashMap<>();
+
+        for(Node node: nodes.values())
+            distances.put(node, Integer.MAX_VALUE);
+        distances.replace(fromNode, 0);
+
+        Map<Node, Node> previousNodes = new HashMap<>();
+        Set<Node> visited = new HashSet<>();
+        PriorityQueue<NodeEntry> queue = new PriorityQueue<>(Comparator.comparingInt(ne->ne.priority));
+        queue.add(new NodeEntry(fromNode, 0));
+
+        while(!queue.isEmpty()){
+            Node current = queue.remove().node;
+            visited.add(current);
+
+            for(Edge edge: current.getEdges()){
+                if(visited.contains(edge.toNode))
+                    continue;
+
+                int newDistance = distances.get(current) + edge.weight;
+
+                if(newDistance < distances.get(edge.toNode)){
+                    distances.replace(edge.toNode, newDistance);
+                    previousNodes.put(edge.toNode, current);
+                    queue.add(new NodeEntry(edge.toNode, newDistance));
+                }
+            }
+        }
+        return buildPath(previousNodes, toNode);
+    }
+
+    private Path buildPath(Map<Node, Node> previousNodes, Node toNode){
+        Stack<Node> stack = new Stack<>();
+        stack.push(toNode);
+        Node previous = previousNodes.get(toNode);
+        while(previous != null){
+            stack.push(previous);
+            previous = previousNodes.get(previous);
+        }
+        Path path = new Path();
+        while(!stack.isEmpty())
+            path.add(stack.pop().label);
+        return path;
+    }
 
 
 }

@@ -326,5 +326,9 @@ public class Main {
         wgraph.print();
         int distance = wgraph.getShortestDistance("A", "E");
         System.out.println("Shortest Distance: " + distance);
+        System.out.println("Shortest Distance: " + wgraph.getShortestPath("A","E"));
+
+
+
     }
 }
