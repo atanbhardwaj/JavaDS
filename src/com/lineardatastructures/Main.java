@@ -307,36 +307,36 @@ public class Main {
 //        System.out.println(graph.hasCycle());
 
 
-        WeightedGraph wgraph = new WeightedGraph();
-        wgraph.addNode("A");
-        wgraph.addNode("B");
-        wgraph.addNode("C");
-        wgraph.addNode("D");
-        wgraph.addNode("E");
-        wgraph.addNode("F");
-        wgraph.addEdge("A","B",3);
-        wgraph.addEdge("A","C",4);
-        wgraph.addEdge("A","D",2);
-        wgraph.addEdge("B", "D",6);
-        wgraph.addEdge("C", "D",1);
-        wgraph.addEdge("B", "E",3);
-        wgraph.addEdge("D", "E",5);
-        wgraph.addEdge("D", "F",1);
-        wgraph.addEdge("F", "E",2);
-        wgraph.print();
-        int distance = wgraph.getShortestDistance("A", "E");
-        System.out.println("Shortest Distance: " + distance);
-        System.out.println("Shortest Path: " + wgraph.getShortestPath("A","E"));
-        System.out.println("Has Cycle: "+ wgraph.hasCycle());
-
-        WeightedGraph wgraph1 = new WeightedGraph();
-        wgraph1.addNode("A");
-        wgraph1.addNode("B");
-        wgraph1.addNode("C");
-        wgraph1.addNode("D");
-        wgraph1.addEdge("A","B",2);
-        wgraph1.addEdge("B","C",2);
-        wgraph1.addEdge("C","D",2);
-        System.out.println("Has Cycle: "+wgraph1.hasCycle());
+//        WeightedGraph wgraph = new WeightedGraph();
+//        wgraph.addNode("A");
+//        wgraph.addNode("B");
+//        wgraph.addNode("C");
+//        wgraph.addNode("D");
+//        wgraph.addNode("E");
+//        wgraph.addNode("F");
+//        wgraph.addEdge("A","B",3);
+//        wgraph.addEdge("A","C",4);
+//        wgraph.addEdge("A","D",2);
+//        wgraph.addEdge("B", "D",6);
+//        wgraph.addEdge("C", "D",1);
+//        wgraph.addEdge("B", "E",3);
+//        wgraph.addEdge("D", "E",5);
+//        wgraph.addEdge("D", "F",1);
+//        wgraph.addEdge("F", "E",2);
+//        wgraph.print();
+//        int distance = wgraph.getShortestDistance("A", "E");
+//        System.out.println("Shortest Distance: " + distance);
+//        System.out.println("Shortest Path: " + wgraph.getShortestPath("A","E"));
+//        System.out.println("Has Cycle: "+ wgraph.hasCycle());
+//
+//        WeightedGraph wgraph1 = new WeightedGraph();
+//        wgraph1.addNode("A");
+//        wgraph1.addNode("B");
+//        wgraph1.addNode("C");
+//        wgraph1.addNode("D");
+//        wgraph1.addEdge("A","B",2);
+//        wgraph1.addEdge("B","C",2);
+//        wgraph1.addEdge("C","D",2);
+//        System.out.println("Has Cycle: "+wgraph1.hasCycle());
     }
 }
