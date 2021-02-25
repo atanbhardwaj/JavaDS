@@ -312,12 +312,19 @@ public class Main {
         wgraph.addNode("B");
         wgraph.addNode("C");
         wgraph.addNode("D");
+        wgraph.addNode("E");
+        wgraph.addNode("F");
         wgraph.addEdge("A","B",3);
         wgraph.addEdge("A","C",4);
         wgraph.addEdge("A","D",2);
         wgraph.addEdge("B", "D",6);
         wgraph.addEdge("C", "D",1);
+        wgraph.addEdge("B", "E",3);
+        wgraph.addEdge("D", "E",5);
+        wgraph.addEdge("D", "F",1);
+        wgraph.addEdge("F", "E",2);
         wgraph.print();
-
+        int distance = wgraph.getShortestDistance("A", "E");
+        System.out.println("Shortest Distance: " + distance);
     }
 }
