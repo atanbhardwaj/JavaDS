@@ -326,9 +326,18 @@ public class Main {
         wgraph.print();
         int distance = wgraph.getShortestDistance("A", "E");
         System.out.println("Shortest Distance: " + distance);
-        System.out.println("Shortest Distance: " + wgraph.getShortestPath("A","E"));
+        System.out.println("Shortest Path: " + wgraph.getShortestPath("A","E"));
+        System.out.println("Has Cycle: "+ wgraph.hasCycle());
 
-
+        WeightedGraph wgraph1 = new WeightedGraph();
+        wgraph1.addNode("A");
+        wgraph1.addNode("B");
+        wgraph1.addNode("C");
+        wgraph1.addNode("D");
+        wgraph1.addEdge("A","B",2);
+        wgraph1.addEdge("B","C",2);
+        wgraph1.addEdge("C","D",2);
+        System.out.println("Has Cycle: "+wgraph1.hasCycle());
 
     }
 }

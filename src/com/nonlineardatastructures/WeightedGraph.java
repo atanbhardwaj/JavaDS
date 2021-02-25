@@ -163,5 +163,25 @@ public class WeightedGraph {
         return path;
     }
 
+    public boolean hasCycle(){
+        Set<Node> visited = new HashSet<>();
+        for(Node node: nodes.values()){
+            if(!visited.contains(node) && hasCycle(node, null, visited))
+                return true;
+        }
+        return false;
+    }
+
+    private boolean hasCycle(Node node, Node parent, Set<Node> visited){
+        visited.add(node);
+        for(Edge edge: node.getEdges()){
+            if(edge.toNode == parent)
+                continue;
+
+            if(visited.contains(edge.toNode) || hasCycle(edge.toNode, node, visited))
+                return true;
+        }
+        return false;
+    }
 
 }
