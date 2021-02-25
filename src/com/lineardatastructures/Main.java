@@ -338,6 +338,5 @@ public class Main {
         wgraph1.addEdge("B","C",2);
         wgraph1.addEdge("C","D",2);
         System.out.println("Has Cycle: "+wgraph1.hasCycle());
-
     }
 }

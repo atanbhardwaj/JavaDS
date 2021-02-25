@@ -23,6 +23,11 @@ public class WeightedGraph {
         }
     }
 
+    @Override
+    public String toString(){
+        return nodes.toString();
+    }
+
     private class Edge{
         private Node fromNode;
         private Node toNode;
@@ -184,4 +189,37 @@ public class WeightedGraph {
         return false;
     }
 
+    public WeightedGraph getMinimumSpanningTree(){
+        WeightedGraph tree = new WeightedGraph();
+        if(nodes.isEmpty())
+            return tree;
+
+        PriorityQueue<Edge> edges = new PriorityQueue<>(Comparator.comparingInt(e->e.weight));
+
+        Node startNode = nodes.values().iterator().next();
+
+        edges.addAll(startNode.getEdges());
+        tree.addNode(startNode.label);
+
+        if(edges.isEmpty())
+            return tree;
+
+        while(tree.nodes.size() < nodes.size()){
+            Edge minEdge = edges.remove();
+            if(tree.containsNode(minEdge.toNode.label))
+                continue;
+
+            tree.addNode(minEdge.toNode.label);
+            tree.addEdge(minEdge.fromNode.label, minEdge.toNode.label, minEdge.weight);
+
+            for(Edge edge: minEdge.toNode.getEdges()){
+                if(!tree.containsNode(edge.toNode.label))
+                    edges.add(edge);
+            }
+        }
+        return tree;
+    }
+    public boolean containsNode(String label){
+        return nodes.containsKey(label);
+    }
 }
