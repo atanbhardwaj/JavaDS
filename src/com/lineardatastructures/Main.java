@@ -295,14 +295,29 @@ public class Main {
 //
 //        System.out.println(graph.topologicalSort("X"));
 
-        Graph graph = new Graph();
-        graph.addNode("A");
-        graph.addNode("B");
-        graph.addNode("C");
-        graph.addEdge("A","B");
-        graph.addEdge("B","C");
-        graph.addEdge("A","C");
-        System.out.println(graph.hasCycle());
+//        Graph graph = new Graph();
+//        graph.addNode("A");
+//        graph.addNode("B");
+//        graph.addNode("C");
+//        graph.addNode("D");
+//        graph.addEdge("A","B");
+//        graph.addEdge("A","C");
+//        graph.addEdge("A","D");
+//        graph.print();
+//        System.out.println(graph.hasCycle());
+
+
+        WeightedGraph wgraph = new WeightedGraph();
+        wgraph.addNode("A");
+        wgraph.addNode("B");
+        wgraph.addNode("C");
+        wgraph.addNode("D");
+        wgraph.addEdge("A","B",3);
+        wgraph.addEdge("A","C",4);
+        wgraph.addEdge("A","D",2);
+        wgraph.addEdge("B", "D",6);
+        wgraph.addEdge("C", "D",1);
+        wgraph.print();
 
     }
 }
