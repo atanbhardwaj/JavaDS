@@ -344,16 +344,16 @@ public class Main {
 //        WeightedGraph minimumSpanningTree = wgraph1.getMinimumSpanningTree();
 //        minimumSpanningTree.print();
 
-        WeightedGraph newtree = new WeightedGraph();
-        newtree.addNode("A");
-        newtree.addNode("B");
-        newtree.addNode("C");
-        newtree.addNode("D");
-        newtree.addEdge("A","B",2);
-        newtree.addEdge("B","C",2);
-        newtree.addEdge("C","D",2);
-        newtree.getMinimumSpanningTree().print();
-
+//        WeightedGraph newtree = new WeightedGraph();
+//        newtree.addNode("A");
+//        newtree.addNode("B");
+//        newtree.addNode("C");
+//        newtree.addNode("D");
+//        newtree.addEdge("A","B",2);
+//        newtree.addEdge("B","C",2);
+//        newtree.addEdge("C","D",2);
+//        newtree.getMinimumSpanningTree().print();
+//
 
     }
 }
