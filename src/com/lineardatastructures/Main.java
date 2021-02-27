@@ -353,7 +353,14 @@ public class Main {
 //        newtree.addEdge("B","C",2);
 //        newtree.addEdge("C","D",2);
 //        newtree.getMinimumSpanningTree().print();
-//
 
+        WeightedGraph wgraph3  = new WeightedGraph();
+        wgraph3.addNode("A");
+        wgraph3.addNode("C");
+        wgraph3.addNode("D");
+        wgraph3.addEdge("A","C",3);
+        wgraph3.addEdge("C","D",3);
+        wgraph3.addEdge("A","D",3);
+        wgraph3.getMinimumSpanningTree().print();
     }
 }
